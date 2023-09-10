@@ -1,0 +1,52 @@
+
+<HTML>
+
+<BODY>
+    <CENTER>
+        <H3>Latihan Objek Document</H3>
+        <hr>
+        Membuka Web Page dengan Perintah Window.Location.href
+    </CENTER>
+    <SCRIPT LANGUAGE="Javascript">
+        function konek1() {
+            if (document.pilihan.pilih.options[0].selected) {
+                window.location.href = "bab5.html";
+            }
+            else if (document.pilihan.pilih.options[1].selected) {
+                window.location.href = "bab9real.html";
+            }
+            else if (document.pilihan.pilih.options[2].selected) {
+                window.location.href = "bab3.html";
+            }
+            return true;
+        }
+        function konek2() {
+            var pilihint;
+            var pilihstr;
+            pilihint = document.pilihan.pilih.selectedIndex;
+            pilihstr = document.pilihan.pilih.options[pilihint].text;
+            document.pilihan.pilihteks.value = " Go To " + pilihstr + "!";
+        }
+    </SCRIPT>
+    <CENTER>
+        <FORM NAME="pilihan">
+            <B>MENU PILIHAN DENGAN TOMBOL</B>
+            <P><SELECT NAME="pilih" ONCHANGE="konek2()" MULTIPLE SIZE="3">
+                    <OPTION>bab 5 .................................. </OPTION>
+                    <OPTION>bab 9 ..................................</OPTION>
+                    <OPTION>bab 3 ..................................</OPTION>
+                </SELECT>
+            </P>
+            <P><BR>
+                <INPUT TYPE="button" name="pilihteks" value="Yakin??" size="40" maxlength="40">
+            </P>
+            <P>
+                <INPUT TYPE="button" NAME="Gobutton" VALUE="Goo!!" ONCLICK="konek1()">
+            </P>
+    </CENTER>
+    </FORM>
+</BODY>
+
+</HTML>
+
+
